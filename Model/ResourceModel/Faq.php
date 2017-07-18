@@ -40,7 +40,7 @@ class Faq extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 
     const FAQ_ENTITY_TYPE = 'faq-question';
 
-    const FAQ_DOT_HTML = '.html';
+    const FAQ_DOT_HTML = '';
 
     const FAQ_QUESTION_TARGET_PATH = 'faq/question/view/faq_id/';
 

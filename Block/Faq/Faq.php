@@ -91,22 +91,24 @@ class Faq extends \Magento\Framework\View\Element\Template
 
         $breadcrumbBlock = $this->getLayout()->getBlock('breadcrumbs');
 
-        $breadcrumbBlock->addCrumb(
-            'home',
-            [
-                'label' => __('Home'),
-                'title' => __('Home'),
-                'link' => $this->_storeManager->getStore()->getBaseUrl(),
-            ]
-        );
+        if($breadcrumbBlock !== false) {
+            $breadcrumbBlock->addCrumb(
+                'home',
+                [
+                    'label' => __('Home'),
+                    'title' => __('Home'),
+                    'link' => $this->_storeManager->getStore()->getBaseUrl(),
+                ]
+            );
 
-        $breadcrumbBlock->addCrumb(
-            'faq',
-            [
-                'label' => __('FAQ'),
-                'title' => __('FAQ')
-            ]
-        );
+            $breadcrumbBlock->addCrumb(
+                'faq',
+                [
+                    'label' => __('FAQ'),
+                    'title' => __('FAQ')
+                ]
+            );
+        }
 
         return parent::_prepareLayout();
     }

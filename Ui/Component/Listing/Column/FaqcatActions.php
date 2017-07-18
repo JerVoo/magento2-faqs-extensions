@@ -91,7 +91,7 @@ class FaqcatActions extends \Magento\Ui\Component\Listing\Columns\Column
 
                 if (isset($item['identifier'])) {
                     $item[$name]['preview'] = [
-                        'href' => $this->actionUrlBuilder->getUrl(faqResourceModel::FAQ_CATEGORY_PATH.'/'.$item['identifier'].faqResourceModel::FAQ_DOT_HTML, isset($item['store_id']) ? $item['store_id'] : null, null),
+                        'href' => $this->actionUrlBuilder->getUrl(faqResourceModel::FAQ_CATEGORY_PATH.'/'.$item['identifier'], isset($item['store_id']) ? $item['store_id'] : null, null),
                         'label' => __('View')
                     ];
                 }
